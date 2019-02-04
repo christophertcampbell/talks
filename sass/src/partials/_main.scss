@@ -39,26 +39,26 @@ main {
 		&.row3  {
 
 			div {
-				background-color: #d1d6fa;
+				background-color: $color_accent;
 			}
 
 		}
 
 		&.row6 {
-			background-color: #ccc;
+			background-color: $color_accent;
 
 			// Equivalent to: main.row6 div
 			// Will have all of %card's styles,
 			// and mixin 'dashed-border' with custom colors
 			div {
 				@extend %card;
-				@include dashed-border(red, purple);
+				@include dashed-border(#0089cc, #0089cc);
 			}
 		}
 
 		&.row8 {
 			@extend %card;
-			@include dashed-border(blue, green);
+			@include dashed-border(red, red);
 		}
 
 		&.credits {

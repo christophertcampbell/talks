@@ -5,14 +5,14 @@
 */
 
 %card {
-	background-color: #bbb;
+	background-color: #ddd;
 	font-size: 1.3em;
-	font-style: italic;
-	box-shadow: 3px 3px 10px;
-	-webkit-box-shadow: 3px 3px 10px;
+	box-shadow: 3px 3px 10px #777;
+	-webkit-box-shadow: 3px 3px 10px #777;
 	padding: 1em;
 
 	.inner-card {
 		background-color: #999;
+		color: #efefef;
 	}
 }

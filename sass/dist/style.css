@@ -18,15 +18,15 @@
    Common styles can be defined in one place, applied in many places
 */
 main .p-card, main .row.row8, main .row.row6 div {
-  background-color: #bbb;
+  background-color: #ddd;
   font-size: 1.3em;
-  font-style: italic;
-  box-shadow: 3px 3px 10px;
-  -webkit-box-shadow: 3px 3px 10px;
+  box-shadow: 3px 3px 10px #777;
+  -webkit-box-shadow: 3px 3px 10px #777;
   padding: 1em;
 }
 main .p-card .inner-card, main .row.row8 .inner-card, main .row.row6 div .inner-card {
   background-color: #999;
+  color: #efefef;
 }
 
 /* Partials - Split CSS into managable chunks */
@@ -75,22 +75,22 @@ main .row.features div {
   width: 29%;
 }
 main .row.row3 div {
-  background-color: #d1d6fa;
+  background-color: #b0ddf3;
 }
 main .row.row6 {
-  background-color: #ccc;
+  background-color: #b0ddf3;
 }
 main .row.row6 div {
-  border: 4px dashed red;
+  border: 4px dashed #0089cc;
 }
 main .row.row6 div a {
-  color: purple;
+  color: #0089cc;
 }
 main .row.row8 {
-  border: 4px dashed blue;
+  border: 4px dashed red;
 }
 main .row.row8 a {
-  color: green;
+  color: red;
 }
 main .row.credits {
   margin-top: 4em;
