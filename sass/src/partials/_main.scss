@@ -52,13 +52,13 @@ main {
 			// and mixin 'dashed-border' with custom colors
 			div {
 				@extend %card;
-				@include dashed-border(red);
+				@include dashed-border(red, purple);
 			}
 		}
 
 		&.row8 {
 			@extend %card;
-			@include dashed-border-2(darkblue, green);
+			@include dashed-border(blue, green);
 		}
 
 		&.credits {

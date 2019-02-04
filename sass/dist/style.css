@@ -7,9 +7,8 @@
 /* ie: max-width: $content_width; */
 /* Mixins: Standardized rules with
    some aspects defined by a variable.
-*/
-/* Mixins can contain:
 
+   Mixins can contain:
    1) Nested rules
    2) Multiple variables
 */
@@ -82,14 +81,16 @@ main .row.row6 {
   background-color: #ccc;
 }
 main .row.row6 div {
-  border: 2px dashed red;
+  border: 4px dashed red;
+}
+main .row.row6 div a {
+  color: purple;
 }
 main .row.row8 {
-  border: 2px dashed darkblue;
+  border: 4px dashed blue;
 }
 main .row.row8 a {
-  background-color: green;
-  color: #efefef;
+  color: green;
 }
 main .row.credits {
   margin-top: 4em;
