@@ -1,0 +1,21 @@
+/* Mixins: Standardized rules with
+   some aspects defined by a variable.
+*/
+
+@mixin dashedBorder($borderColor) {
+	border: 2px dashed $borderColor;
+}
+
+/* Mixins can contain:
+
+   1) Nested rules
+   2) Multiple variables
+*/
+@mixin dashedBorder2($borderColor, $linkColor) {
+	border: 2px dashed $borderColor;
+
+	a {
+		background-color: $linkColor;
+		color: #efefef;
+	}
+}

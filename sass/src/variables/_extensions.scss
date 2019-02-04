@@ -1,0 +1,14 @@
+/* Extensions are re-usable groups of style rules.
+
+   DRY - Don't repeat yourself
+   Common styles can be defined in one place, applied in many places
+*/
+
+%card {
+	background-color: #bbb;
+	font-size: 1.3em;
+	font-style: italic;
+	box-shadow: 3px 3px 10px;
+	-webkit-box-shadow: 3px 3px 10px;
+	padding: 1em;
+}

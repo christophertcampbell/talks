@@ -1,0 +1,123 @@
+/* This is the entry point */
+/* Multi-line comments will be removed in minimized output */
+/*! Important comments (!) will be kept in minimized output */
+/* Variables, Mixins and Extensions */
+/* Define before importing partials */
+/* Variables can be used throughout your SASS files */
+/* ie: max-width: $content_width; */
+/* Mixins: Standardized rules with
+   some aspects defined by a variable.
+*/
+/* Mixins can contain:
+
+   1) Nested rules
+   2) Multiple variables
+*/
+/* Extensions are re-usable groups of style rules.
+
+   DRY - Don't repeat yourself
+   Common styles can be defined in one place, applied in many places
+*/
+main .p-card, main .row.row8, main .row.row6 div {
+  background-color: #bbb;
+  font-size: 1.3em;
+  font-style: italic;
+  box-shadow: 3px 3px 10px;
+  -webkit-box-shadow: 3px 3px 10px;
+  padding: 1em;
+}
+
+/* Partials - Split CSS into managable chunks */
+body {
+  color: #333;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2a6cc4;
+}
+
+a {
+  color: #2a6cc4;
+}
+
+p {
+  line-height: 1.4em;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+/* The following snippet of SASS shows an example of nesting.
+
+   Nesting benefits:
+   1) Clearly see relationships
+   2) Easier to edit
+   3) Can change a parent selector with a single edit
+*/
+main > * {
+  margin-left: 4em;
+  margin-right: 4em;
+}
+main .row {
+  margin-bottom: 1.5em;
+}
+main .row.features {
+  margin-left: 0;
+  margin-right: 0;
+  overflow: hidden;
+}
+main .row.features div {
+  float: left;
+  margin: 2%;
+  padding: 2%;
+  width: 29%;
+}
+main .row.row3 div {
+  background-color: #d1d6fa;
+}
+main .row.row6 {
+  background-color: #ccc;
+}
+main .row.row6 div {
+  border: 2px dashed red;
+}
+main .row.row8 {
+  border: 2px dashed darkblue;
+}
+main .row.row8 a {
+  background-color: green;
+  color: #efefef;
+}
+main .row.credits {
+  margin-top: 4em;
+  text-align: center;
+}
+.block {
+  background-color: #888;
+  height: 50px;
+  margin-bottom: 1.5em;
+  margin-left: auto;
+  margin-right: auto;
+  max-width: 300px;
+}
+
+.block.width-50 {
+  /* SASS supports basic math operators */
+  max-width: 150px;
+}
+
+.block.width-25 {
+  max-width: 75px;
+}
+
+.block.width-10 {
+  max-width: 30px;
+}
+
+/*# sourceMappingURL=style.css.map */

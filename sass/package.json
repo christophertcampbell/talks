@@ -1,0 +1,20 @@
+{
+  "name": "talks",
+  "version": "1.0.0",
+  "description": "Demonstration of SASS features",
+  "main": "index.js",
+  "directories": {
+    "example": "examples"
+  },
+  "scripts": {
+	"build": "sass src:dist",
+	"build-min": "sass src:dist --style compressed",
+	"watch": "sass src:dist --watch",
+	"watch-min": "sass src:dist --style compressed --watch"
+  },
+  "author": "Chris Campbell",
+  "license": "MIT",
+  "devDependencies": {
+	"sass": "^1.16.1"
+  }
+}

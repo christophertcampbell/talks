@@ -1,0 +1,104 @@
+* {
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+}
+
+/* The following snippet of SASS shows an example of nesting.
+
+   Nesting benefits:
+   1) Clearly see relationships
+   2) Easier to edit
+   3) Can change a parent selector with a single edit
+*/
+
+main {
+
+	// Equivalent to: main > *
+	> * {
+		margin-left: 4em;
+		margin-right: 4em;
+	}
+
+	// Equivalent to: main .row
+	.row {
+
+		margin-bottom: 1.5em;
+
+		// Equivalent to: main .row.features
+		&.features {
+			margin-left: 0;
+			margin-right: 0;
+			overflow: hidden;
+	
+			div {
+	
+				float: left;
+				margin: 2%;
+				padding: 2%;
+				width: 29%;
+			}
+		}
+		
+		// Equivalent to main.row.row3
+		&.row3  {
+
+			div {
+				background-color: #d1d6fa;
+			}
+
+		}
+
+		&.row6 {
+			background-color: #ccc;
+
+			// Equivalent to: main.row6 div
+			// Will have all of %card's styles,
+			// and mixin 'dashedBorder2' with custom colors
+			div {
+				@extend %card;
+				@include dashedBorder(red);
+			}
+		}
+
+		&.row8 {
+			@extend %card;
+			@include dashedBorder2(darkblue, green);
+		}
+
+		&.credits {
+			margin-top: 4em;
+			text-align: center;
+		}
+	}
+
+	.p-card {
+		// A second element extends %card!
+		@extend %card;
+	}
+}
+
+$block_width: 300px;
+.block {
+	background-color: #888;
+	height: 50px;
+	margin-bottom: 1.5em;
+	margin-left: auto;
+	margin-right: auto;
+	max-width: $block_width;
+}
+
+.block.width-50 {
+	/* SASS supports basic math operators */
+	max-width: $block_width / 2;
+}
+
+.block.width-25 {
+	max-width: $block_width / 4;
+}
+
+.block.width-10 {
+	max-width: $block_width / 10;
+}
