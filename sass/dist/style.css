@@ -56,13 +56,7 @@ body {
   margin: 0;
 }
 
-/* The following snippet of SASS shows an example of nesting.
-
-   Nesting benefits:
-   1) Clearly see relationships
-   2) Easier to edit
-   3) Can change a parent selector with a single edit
-*/
+/* Example of nesting in SASS */
 main > * {
   margin-left: 4em;
   margin-right: 4em;
