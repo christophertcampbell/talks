@@ -2,8 +2,8 @@
    some aspects defined by a variable.
 */
 
-@mixin dashedBorder($borderColor) {
-	border: 2px dashed $borderColor;
+@mixin dashed-border($border_color) {
+	border: 2px dashed $border_color;
 }
 
 /* Mixins can contain:
@@ -11,11 +11,11 @@
    1) Nested rules
    2) Multiple variables
 */
-@mixin dashedBorder2($borderColor, $linkColor) {
-	border: 2px dashed $borderColor;
+@mixin dashed-border-2($border_color, $link_color) {
+	border: 2px dashed $border_color;
 
 	a {
-		background-color: $linkColor;
+		background-color: $link_color;
 		color: #efefef;
 	}
 }

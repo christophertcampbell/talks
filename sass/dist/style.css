@@ -26,6 +26,9 @@ main .p-card, main .row.row8, main .row.row6 div {
   -webkit-box-shadow: 3px 3px 10px;
   padding: 1em;
 }
+main .p-card .inner-card, main .row.row8 .inner-card, main .row.row6 div .inner-card {
+  background-color: #999;
+}
 
 /* Partials - Split CSS into managable chunks */
 body {

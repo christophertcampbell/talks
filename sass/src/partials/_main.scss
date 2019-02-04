@@ -56,16 +56,16 @@ main {
 
 			// Equivalent to: main.row6 div
 			// Will have all of %card's styles,
-			// and mixin 'dashedBorder2' with custom colors
+			// and mixin 'dashed-border' with custom colors
 			div {
 				@extend %card;
-				@include dashedBorder(red);
+				@include dashed-border(red);
 			}
 		}
 
 		&.row8 {
 			@extend %card;
-			@include dashedBorder2(darkblue, green);
+			@include dashed-border-2(darkblue, green);
 		}
 
 		&.credits {
