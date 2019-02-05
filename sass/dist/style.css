@@ -20,8 +20,8 @@
 main .p-card, main .row.row8, main .row.row6 div {
   background-color: #ddd;
   font-size: 1.3em;
-  box-shadow: 3px 3px 10px #777;
-  -webkit-box-shadow: 3px 3px 10px #777;
+  box-shadow: 5px 5px 15px rgba(1, 1, 1, 0.7);
+  -webkit-box-shadow: 5px 5px 15px rgba(1, 1, 1, 0.7);
   padding: 1em;
 }
 main .p-card .inner-card, main .row.row8 .inner-card, main .row.row6 div .inner-card {
@@ -75,13 +75,24 @@ main .row.features div {
   width: 29%;
 }
 main .row.row3 div {
-  background-color: #b0ddf3;
+  background-color: #2c79a6;
+  color: #efefef;
+}
+main .row.row3 div h1, main .row.row3 div h2, main .row.row3 div h3, main .row.row3 div h4, main .row.row3 div h5, main .row.row3 div h6 {
+  color: #efefef;
+}
+main .row.row3 div a {
+  color: #efefef;
+  font-style: italic;
+}
+main .row.row3 div a:hover {
+  color: #555;
 }
 main .row.row6 {
-  background-color: #b0ddf3;
+  background-color: #2c79a6;
 }
 main .row.row6 div {
-  border: 4px dashed #0089cc;
+  border: 4px dashed #333;
 }
 main .row.row6 div a {
   color: #0089cc;
