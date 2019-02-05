@@ -157,6 +157,7 @@ $primary_color: red;
 
 * Basic math operators can be used in SASS
 * Allowable operators: `+`, `-`, `*`, `/`, `%`
+* Math operators can be used with variables
 
 ```scss
 .my-element {
@@ -165,6 +166,10 @@ $primary_color: red;
 
 .another-element {
 	width: 600px / 960px * 50%;
+}
+
+.a-third-element {
+	max-width: $max_content_width + 200px;
 }
 ```
 
