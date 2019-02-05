@@ -127,7 +127,7 @@ $primary_color: red;
 
 * Mixins are very similar to extensions, with the addition of accepting variables for customizing their rules
 * Mixins are defined with `@mixin` and included with `@include`.
-* Extensions can include nested rules.
+* Mixins can include nested rules.
 
 ```scss
 // Define the mixin
