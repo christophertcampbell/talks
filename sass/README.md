@@ -187,4 +187,4 @@ Comments will be handled in different ways depending on whether you compile in c
 
 ### 8. Source Maps
 
-The SASS CLI generates a source map for each bundle (`bundle.css.map`).  The source map allows the browser's developer tools to show exactly which partial a particular style rule is contained in.
+The SASS CLI generates a source map for each bundle (`bundle.css.map`).  The source map allows the browser's developer tools to show exactly which partial contains a particular style rule.
