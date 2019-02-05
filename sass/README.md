@@ -127,7 +127,7 @@ $primary_color: red;
 
 * Mixins are very similar to extensions, with the addition of accepting variables for customizing their rules
 * Mixins are defined with `@mixin` and included with `@include`.
-* Extensions can include nested rules.
+* Mixins can include nested rules.
 
 ```scss
 // Define the mixin
@@ -157,6 +157,7 @@ $primary_color: red;
 
 * Basic math operators can be used in SASS
 * Allowable operators: `+`, `-`, `*`, `/`, `%`
+* Math operators can be used with variables
 
 ```scss
 .my-element {
@@ -165,6 +166,10 @@ $primary_color: red;
 
 .another-element {
 	width: 600px / 960px * 50%;
+}
+
+.a-third-element {
+	max-width: $max_content_width + 200px;
 }
 ```
 
@@ -182,4 +187,4 @@ Comments will be handled in different ways depending on whether you compile in c
 
 ### 8. Source Maps
 
-The SASS CLI generates a source map for each bundle (`bundle.css.map`).  The source map allows the browser's developer tools to show exactly which partial a particular style rule is contained in.
+The SASS CLI generates a source map for each bundle (`bundle.css.map`).  The source map allows the browser's developer tools to show exactly which partial contains a particular style rule.
