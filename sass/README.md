@@ -1,4 +1,4 @@
-# Quick Intro to SASS
+# Quick Guide to SASS
 
 By Chris Campbell, &copy;2019; License: MIT
 
