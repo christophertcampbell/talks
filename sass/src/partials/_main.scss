@@ -13,6 +13,12 @@ main {
 	> * {
 		margin-left: 4em;
 		margin-right: 4em;
+
+		@media screen and (min-width: 1000px) {
+			max-width: $max_content_width;
+			margin-left: auto;
+			margin-right: auto;
+		}
 	}
 
 	// Equivalent to: main .row
@@ -25,6 +31,12 @@ main {
 			margin-left: 0;
 			margin-right: 0;
 			overflow: hidden;
+
+			@media screen and (min-width: 1000px) {
+				max-width: $max_content_width + 200px;
+				margin-left: auto;
+				margin-right: auto;
+			}
 	
 			div {
 	
