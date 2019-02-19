@@ -63,34 +63,60 @@ project/
 
 The following is equivalent to `main .row.row3 > div`:
 
-```scss
+<div><div style="display:inline-block;width:49%;vertical-align:top;">
+SASS
+<pre><code class="language-scss">
 main {
 	margin-left: 4em;
 	margin-right: 4em;
 
-	.row {
-		margin-bottom: 1.5em;
+		.row {
+			margin-bottom: 1.5em;
 
-		&.row3  {
-			background-color: #d1d6fa;
-			
-			> div {
-				...
+			&.row3  {
+				background-color: #d1d6fa;
+				
+				> div {
+					...
+				}
 			}
 		}
-	}
 }
-```
+</code></pre>
+</div>
+<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+CSS
+<pre><code class="language-scss">
+main {
+	margin-left: 4em;
+	margin-right: 4em;
+}
+</code><code class="language-scss">
+main .row {
+	margin-bottom: 1.5em;
+}
+</code><code class="language-scss">
+main .row.row3 {
+	background-color: #d1d6fa;
+}
+</code><code class="language-scss">
+main .row.row3 > div {
+	...
+}
+</code></pre>
+</div></div>
 
 ### 3. Variables
 
 * Define variables for repeated use throughout (ie: common colors, widths, etc).
 * Variable names are prefixed with a `$`.
 
-```scss
+<div><div style="display:inline-block;width:49%;vertical-align:top;">
+SASS
+<pre><code class="language-scss">
 // Define the variable
 $primary_color: red;
-
+</code><code class="language-scss">
 // Use the variable
 .content {
 	.accent {
@@ -100,27 +126,75 @@ $primary_color: red;
 		border: 1px solid $primary_color;
 	}
 }
-```
+</code></pre>
+</div>
+<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+CSS
+<pre><code class="language-scss">
+.content .accent {
+	color: red;
+}
+</code><code class="language-scss">
+.content .accent-border {
+	border: 1px solid red;
+}
+</code></pre>
+</div></div>
 
-Variables can also be used as all or part of selectors:
+#### Variables can also be used as all or part of selectors:
 
-```scss
-// The following will target .module-1-container
+<div><div style="display:inline-block;width:49%;vertical-align:top;">
+SASS
+<pre><code class="language-scss">
 $my_selector: ".module-1";
+</code><code class="language-scss">
 #{$my_selector}-container {
 	...
 }
-```
+</code><code class="language-scss">
+</code><code class="language-scss">
+#{$my_selector}-inner {
+	...
+}
+</code></pre>
+</div>
+<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+CSS
+<pre><code class="language-scss">
+.module-1-container {
+	...
+}
+</code><code class="language-scss">
+.module-1-inner {
+	...
+}
+</code></pre>
+</div></div>
 
-Multiple selectors can be included in a single variable:
+#### Multiple selectors can be included in a single variable:
 
-```scss
-// The following will target both .module-1 and .module-2
+<div><div style="display:inline-block;width:49%;vertical-align:top;">
+SASS
+<pre><code class="language-scss">
 $my_multiple_selectors: ".module-1,.module-2";
+</code><code class="language-scss">
 #{$my_multiple_selectors} {
 	...
 }
-```
+</code></pre>
+</div>
+<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+CSS
+<pre><code class="language-scss">
+.module-1 {
+	...
+}
+</code><code class="language-scss">
+.module-2 {
+	...
+}
+</code></pre>
+</div></div>
 
 ### 4. Extensions
 
@@ -128,29 +202,49 @@ $my_multiple_selectors: ".module-1,.module-2";
 * Extensions are prefixed with `%` and are included by: `@extend %my-extension`.
 * Extensions can include nested rules.
 
-```scss
+<div><div style="display:inline-block;width:49%;vertical-align:top;">
+SASS
+<pre><code class="language-scss">
 // Define the extension
 %padded-border {
 	border: 1px solid #333;
 	padding: 1em;
-
+</code><code class="language-scss">
 	// Nested rules are permitted
 	.inner-element {
 		border: 1px dashed #333;
 		padding: .5em;
 	}
 }
-
+</code><code class="language-scss">
 // Use the extension
 .my-element {
 	@extend %padded-border;
-
+</code><code class="language-scss">
 	// Additional style rules
 	color: blue;
 	font-style: bold;
 	...
 }
-```
+</code></pre>
+</div>
+<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+CSS
+<pre><code class="language-scss">
+.my-element {
+	border: 1px solid #333;
+	padding: 1em;
+	color: blue;
+	font-style: bold;
+	...
+}
+</code><code class="language-scss">
+.my-element .inner-element {
+	border: 1px dashed #333;
+	padding: .5em;
+}
+</code></pre>
+</div></div>
 
 ### 5. Mixins
 
@@ -158,39 +252,73 @@ $my_multiple_selectors: ".module-1,.module-2";
 * Mixins are defined with `@mixin` and included with `@include`.
 * Mixins can include nested rules.
 
-```scss
+<div><div style="display:inline-block;width:49%;vertical-align:top;">
+SASS
+<pre><code class="language-scss">
 // Define the mixin
-@mixin colored-background($background_color, $text_color, $link_color) {
-	background-color: $background_color;
-	color: $text_color;
-
+@mixin colors($bg_color, $color, $link_color) {
+	background-color: $bg_color;
+	color: $color;
+</code><code class="language-scss">
 	// Nested rules are permitted
 	a {
 		color: $link_color;
 	}
 }
-
+</code><code class="language-scss">
 // Use the mixin
 .my-element {
-	@extend %padded-border;
-	@include colored-background(#efefef, #333, red);
-
+	@include colors(#efefef, #333, red);
+</code><code class="language-scss">
 	// Additional style rules
 	font-weight: bold;
 	padding:1em;
 	...
 }
-```
+</code><code class="language-scss">
+.my-element2 {
+	@include colors(#333, #efefef, blue);
+	...
+}
+</code></pre>
+</div>
+<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+CSS
+<pre><code class="language-scss">
+.my-element {
+	background-color: #efefef;
+	color: #333;
+	font-weight: bold;
+	padding:1em;
+	...
+}
+</code><code class="language-scss">
+.my-element a {
+	color: red;
+}
+</code><code class="language-scss">
+.my-element2 {
+	background-color: #333;
+	color: #efefef;
+	...
+}
+</code><code class="language-scss">
+.my-element2 a {
+	color: blue;
+}
+</code></pre>
+</div></div>
 
-Mixins can wrap content:
-
-```scss
+#### Mixins can wrap content:
+<div><div style="display:inline-block;width:49%;vertical-align:top;">
+SASS
+<pre><code class="language-scss">
 @mixin min-width($screen_width) {
 	@media screen and (min-width: $screen_width) {
 		@content;
 	}
 }
-
+</code><code class="language-scss">
 .example-element {
 	@include min-width(1000px) {
 		...
@@ -199,7 +327,24 @@ Mixins can wrap content:
 		...
 	}
 }
-```
+</code></pre>
+</div>
+<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+CSS
+<pre><code class="language-scss">
+@media screen and (min-width: 1000px) {
+	.example-element {
+		...
+	}
+}
+</code><code class="language-scss">
+@media screen and (min-width: 768px) {
+	.example-element {
+		...
+	}
+}
+</code></pre>
+</div></div>
 
 ### 6. Math Operators
 
@@ -207,19 +352,30 @@ Mixins can wrap content:
 * Allowable operators: `+`, `-`, `*`, `/`, `%`
 * Math operators can be used with variables
 
-```scss
+<div><div style="display:inline-block;width:49%;vertical-align:top;">
+SASS
+<pre><code class="language-scss">
 .my-element {
 	width: 1000px * 50%;
 }
-
+</code><code class="language-scss">
 .another-element {
-	width: 600px / 960px * 50%;
-}
-
-.a-third-element {
 	max-width: $max_content_width + 200px;
 }
-```
+</code></pre>
+</div>
+<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+CSS
+<pre><code class="language-scss">
+.my-element {
+	width: 500px;
+}
+</code><code class="language-scss">
+.another-element {
+	max-width: 1200px;
+}
+</code></pre>
+</div></div>
 
 ### 7. Comments
 
