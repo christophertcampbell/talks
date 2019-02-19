@@ -125,6 +125,8 @@ $block_width: 300px;
 	max-width: $block_width / 10;
 }
 
+/* Miscellaneous examples */
+
 $my_selector: ".module-1";
 #{$my_selector}-container {
 	color: purple;
@@ -133,4 +135,20 @@ $my_selector: ".module-1";
 $my_multiple_selectors: ".module-1,.module-2";
 #{$my_multiple_selectors} {
 	color: green;
+}
+
+@mixin min-width($screen_width) {
+	@media screen and (min-width: $screen_width) {
+		@content;
+	}
+}
+
+.example-element {
+	@include min-width(1000px) {
+		color: yellow;
+		font-style: italic;
+	}
+	@include min-width(768px) {
+		color: violet;
+	}
 }

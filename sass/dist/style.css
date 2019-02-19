@@ -146,12 +146,25 @@ main .row.credits {
   max-width: 30px;
 }
 
+/* Miscellaneous examples */
 .module-1-container {
   color: purple;
 }
 
 .module-1, .module-2 {
   color: green;
+}
+
+@media screen and (min-width: 1000px) {
+  .example-element {
+    color: yellow;
+    font-style: italic;
+  }
+}
+@media screen and (min-width: 768px) {
+  .example-element {
+    color: violet;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -182,6 +182,25 @@ $my_multiple_selectors: ".module-1,.module-2";
 }
 ```
 
+Mixins can wrap content:
+
+```scss
+@mixin min-width($screen_width) {
+	@media screen and (min-width: $screen_width) {
+		@content;
+	}
+}
+
+.example-element {
+	@include min-width(1000px) {
+		...
+	}
+	@include min-width(768px) {
+		...
+	}
+}
+```
+
 ### 6. Math Operators
 
 * Basic math operators can be used in SASS
