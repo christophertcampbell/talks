@@ -152,3 +152,15 @@ $my_multiple_selectors: ".module-1,.module-2";
 		color: violet;
 	}
 }
+
+.my-element {
+	width: 1000px * 2;
+}
+
+.my-element-2 {
+	width: (1000px / 2);
+}
+
+.another-element {
+	max-width: $max_content_width + 200px;
+}

@@ -328,7 +328,11 @@ CSS
 SASS
 ```scss
 .my-element {
-	width: 1000px * 50%;
+	width: 1000px * 2;
+}
+
+.my-element-2 {
+	width: (1000px / 2);
 }
 
 .another-element {
@@ -339,11 +343,15 @@ SASS
 CSS
 ```scss
 .my-element {
-	width: 500px;
+  width: 2000px;
+}
+
+.my-element-2 {
+  width: 500px;
 }
 
 .another-element {
-	max-width: 1200px;
+  max-width: 1100px;
 }
 ```
 

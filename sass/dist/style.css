@@ -167,4 +167,16 @@ main .row.credits {
   }
 }
 
+.my-element {
+  width: 2000px;
+}
+
+.my-element-2 {
+  width: 500px;
+}
+
+.another-element {
+  max-width: 1100px;
+}
+
 /*# sourceMappingURL=style.css.map */
