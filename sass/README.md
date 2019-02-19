@@ -367,4 +367,5 @@ Note: Source maps will not work if opening an html file from the file explorer. 
 
 ## Resources
 
-* Official info: [SASS Official Guide](https://sass-lang.com/guide)
+* [SASS Official Guide](https://sass-lang.com/guide)
+* [SASS Official Documentation](https://sass-lang.com/documentation/file.SASS_REFERENCE.html);
