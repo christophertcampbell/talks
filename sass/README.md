@@ -102,6 +102,26 @@ $primary_color: red;
 }
 ```
 
+Variables can also be used as all or part of selectors:
+
+```scss
+// The following will target .module-1-container
+$my_selector: ".module-1";
+#{$my_selector}-container {
+	...
+}
+```
+
+Multiple selectors can be included in a single variable:
+
+```scss
+// The following will target both .module-1 and .module-2
+$my_multiple_selectors: ".module-1,.module-2";
+#{$my_multiple_selectors} {
+	...
+}
+```
+
 ### 4. Extensions
 
 * Define groups of common rules that can be used in multiple styles.

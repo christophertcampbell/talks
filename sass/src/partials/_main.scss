@@ -124,3 +124,13 @@ $block_width: 300px;
 .block.width-10 {
 	max-width: $block_width / 10;
 }
+
+$my_selector: ".module-1";
+#{$my_selector}-container {
+	color: purple;
+}
+
+$my_multiple_selectors: ".module-1,.module-2";
+#{$my_multiple_selectors} {
+	color: green;
+}

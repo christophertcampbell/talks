@@ -146,4 +146,12 @@ main .row.credits {
   max-width: 30px;
 }
 
+.module-1-container {
+  color: purple;
+}
+
+.module-1, .module-2 {
+  color: green;
+}
+
 /*# sourceMappingURL=style.css.map */
