@@ -125,7 +125,7 @@ $block_width: 300px;
 	max-width: $block_width / 10;
 }
 
-/* Miscellaneous examples */
+/* Variables in selector names */
 
 $my_selector: ".module-1";
 #{$my_selector}-container {
@@ -136,6 +136,8 @@ $my_multiple_selectors: ".module-1,.module-2";
 #{$my_multiple_selectors} {
 	color: green;
 }
+
+/* Mixins with content */
 
 @mixin min-width($screen_width) {
 	@media screen and (min-width: $screen_width) {
@@ -152,6 +154,8 @@ $my_multiple_selectors: ".module-1,.module-2";
 		color: violet;
 	}
 }
+
+/* Math operators */
 
 .my-element {
 	width: 1000px * 2;
