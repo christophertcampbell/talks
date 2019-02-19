@@ -10,7 +10,8 @@
 	"build": "sass src:dist",
 	"build-min": "sass src:dist --style compressed",
 	"watch": "sass src:dist --watch",
-	"watch-min": "sass src:dist --style compressed --watch"
+	"watch-min": "sass src:dist --style compressed --watch",
+	"serve": "browser-sync . -w"
   },
   "author": "Chris Campbell",
   "license": "MIT",
