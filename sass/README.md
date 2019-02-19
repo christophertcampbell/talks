@@ -4,10 +4,19 @@ By Chris Campbell, &copy;2019; License: MIT
 
 ## What is SASS?
 
-SASS is an extension to CSS, providing several developer-friendly features for easier development.
+[SASS](https://sass-lang.com/guide) is an extension to CSS, providing several developer-friendly features for easier development.
 * All plain CSS is also valid SASS.  Just change the file extension from .css to .scss.
-* Browsers do NOT directory support SASS. SASS must be pre-compiled to CSS.
-* Official info: [SASS Official Guide](https://sass-lang.com/guide)
+* Browsers do NOT natively support SASS. SASS must be pre-compiled to CSS.
+
+## So why SASS?
+
+SASS allows us to write css:
+* More expressively
+* More concisely
+* With less repetition
+* With greater modularity
+* With clearer heirarchy
+* With small, friendly file structures
 
 ## Installing the SASS compiler
 
@@ -147,8 +156,8 @@ $primary_color: red;
 	@include colored-background(#efefef, #333, red);
 
 	// Additional style rules
-	color: blue;
-	font-style: bold;
+	font-weight: bold;
+	padding:1em;
 	...
 }
 ```
@@ -188,3 +197,7 @@ Comments will be handled in different ways depending on whether you compile in c
 ### 8. Source Maps
 
 The SASS CLI generates a source map for each bundle (`bundle.css.map`).  The source map allows the browser's developer tools to show exactly which partial contains a particular style rule.
+
+## Resources
+
+* Official info: [SASS Official Guide](https://sass-lang.com/guide)
