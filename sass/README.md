@@ -61,62 +61,56 @@ project/
 * Allows better organization of styles, and better readability.
 * Change a parent selector in one place rather than many.
 
-The following is equivalent to `main .row.row3 > div`:
-
-<div><div style="display:inline-block;width:49%;vertical-align:top;">
 SASS
-<pre><code class="language-scss">
+```scss
 main {
 	margin-left: 4em;
 	margin-right: 4em;
 
-		.row {
-			margin-bottom: 1.5em;
+	.row {
+		margin-bottom: 1.5em;
 
-			&.row3  {
-				background-color: #d1d6fa;
-				
-				> div {
-					...
-				}
+		&.row3  {
+			background-color: #d1d6fa;
+			
+			> div {
+				...
 			}
 		}
+	}
 }
-</code></pre>
-</div>
-<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+```
+
 CSS
-<pre><code class="language-scss">
+```scss
 main {
 	margin-left: 4em;
 	margin-right: 4em;
 }
-</code><code class="language-scss">
+
 main .row {
 	margin-bottom: 1.5em;
 }
-</code><code class="language-scss">
+
 main .row.row3 {
 	background-color: #d1d6fa;
 }
-</code><code class="language-scss">
+
 main .row.row3 > div {
 	...
 }
-</code></pre>
-</div></div>
+```
 
 ### 3. Variables
 
 * Define variables for repeated use throughout (ie: common colors, widths, etc).
 * Variable names are prefixed with a `$`.
 
-<div><div style="display:inline-block;width:49%;vertical-align:top;">
 SASS
-<pre><code class="language-scss">
+```scss
 // Define the variable
 $primary_color: red;
-</code><code class="language-scss">
+
 // Use the variable
 .content {
 	.accent {
@@ -126,75 +120,63 @@ $primary_color: red;
 		border: 1px solid $primary_color;
 	}
 }
-</code></pre>
-</div>
-<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+```
+
 CSS
-<pre><code class="language-scss">
+```scss
 .content .accent {
 	color: red;
 }
-</code><code class="language-scss">
+
 .content .accent-border {
 	border: 1px solid red;
 }
-</code></pre>
-</div></div>
+```
 
 #### Variables can also be used as all or part of selectors:
 
-<div><div style="display:inline-block;width:49%;vertical-align:top;">
 SASS
-<pre><code class="language-scss">
+```scss
 $my_selector: ".module-1";
-</code><code class="language-scss">
+
 #{$my_selector}-container {
 	...
 }
-</code><code class="language-scss">
-</code><code class="language-scss">
+
 #{$my_selector}-inner {
 	...
 }
-</code></pre>
-</div>
-<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+```
+
 CSS
-<pre><code class="language-scss">
+```scss
 .module-1-container {
 	...
 }
-</code><code class="language-scss">
+
 .module-1-inner {
 	...
 }
-</code></pre>
-</div></div>
+```
 
 #### Multiple selectors can be included in a single variable:
 
-<div><div style="display:inline-block;width:49%;vertical-align:top;">
 SASS
-<pre><code class="language-scss">
+```scss
 $my_multiple_selectors: ".module-1,.module-2";
-</code><code class="language-scss">
+
 #{$my_multiple_selectors} {
 	...
 }
-</code></pre>
-</div>
-<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+```
+
 CSS
-<pre><code class="language-scss">
-.module-1 {
-	...
-}
-</code><code class="language-scss">
+```scss
+.module-1,
 .module-2 {
 	...
 }
-</code></pre>
-</div></div>
+```
 
 ### 4. Extensions
 
@@ -202,35 +184,33 @@ CSS
 * Extensions are prefixed with `%` and are included by: `@extend %my-extension`.
 * Extensions can include nested rules.
 
-<div><div style="display:inline-block;width:49%;vertical-align:top;">
 SASS
-<pre><code class="language-scss">
+```scss
 // Define the extension
 %padded-border {
 	border: 1px solid #333;
 	padding: 1em;
-</code><code class="language-scss">
+
 	// Nested rules are permitted
 	.inner-element {
 		border: 1px dashed #333;
 		padding: .5em;
 	}
 }
-</code><code class="language-scss">
+
 // Use the extension
 .my-element {
 	@extend %padded-border;
-</code><code class="language-scss">
+
 	// Additional style rules
 	color: blue;
 	font-style: bold;
 	...
 }
-</code></pre>
-</div>
-<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+```
+
 CSS
-<pre><code class="language-scss">
+```scss
 .my-element {
 	border: 1px solid #333;
 	padding: 1em;
@@ -238,13 +218,12 @@ CSS
 	font-style: bold;
 	...
 }
-</code><code class="language-scss">
+
 .my-element .inner-element {
 	border: 1px dashed #333;
 	padding: .5em;
 }
-</code></pre>
-</div></div>
+```
 
 ### 5. Mixins
 
@@ -252,39 +231,37 @@ CSS
 * Mixins are defined with `@mixin` and included with `@include`.
 * Mixins can include nested rules.
 
-<div><div style="display:inline-block;width:49%;vertical-align:top;">
 SASS
-<pre><code class="language-scss">
+```scss
 // Define the mixin
 @mixin colors($bg_color, $color, $link_color) {
 	background-color: $bg_color;
 	color: $color;
-</code><code class="language-scss">
+
 	// Nested rules are permitted
 	a {
 		color: $link_color;
 	}
 }
-</code><code class="language-scss">
+
 // Use the mixin
 .my-element {
 	@include colors(#efefef, #333, red);
-</code><code class="language-scss">
+
 	// Additional style rules
 	font-weight: bold;
 	padding:1em;
 	...
 }
-</code><code class="language-scss">
+
 .my-element2 {
 	@include colors(#333, #efefef, blue);
 	...
 }
-</code></pre>
-</div>
-<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+```
+
 CSS
-<pre><code class="language-scss">
+```scss
 .my-element {
 	background-color: #efefef;
 	color: #333;
@@ -292,33 +269,31 @@ CSS
 	padding:1em;
 	...
 }
-</code><code class="language-scss">
+
 .my-element a {
 	color: red;
 }
-</code><code class="language-scss">
+
 .my-element2 {
 	background-color: #333;
 	color: #efefef;
 	...
 }
-</code><code class="language-scss">
+
 .my-element2 a {
 	color: blue;
 }
-</code></pre>
-</div></div>
+```
 
 #### Mixins can wrap content:
-<div><div style="display:inline-block;width:49%;vertical-align:top;">
 SASS
-<pre><code class="language-scss">
+```scss
 @mixin min-width($screen_width) {
 	@media screen and (min-width: $screen_width) {
 		@content;
 	}
 }
-</code><code class="language-scss">
+
 .example-element {
 	@include min-width(1000px) {
 		...
@@ -327,24 +302,22 @@ SASS
 		...
 	}
 }
-</code></pre>
-</div>
-<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+```
+
 CSS
-<pre><code class="language-scss">
+```scss
 @media screen and (min-width: 1000px) {
 	.example-element {
 		...
 	}
 }
-</code><code class="language-scss">
+
 @media screen and (min-width: 768px) {
 	.example-element {
 		...
 	}
 }
-</code></pre>
-</div></div>
+```
 
 ### 6. Math Operators
 
@@ -352,30 +325,27 @@ CSS
 * Allowable operators: `+`, `-`, `*`, `/`, `%`
 * Math operators can be used with variables
 
-<div><div style="display:inline-block;width:49%;vertical-align:top;">
 SASS
-<pre><code class="language-scss">
+```scss
 .my-element {
 	width: 1000px * 50%;
 }
-</code><code class="language-scss">
+
 .another-element {
 	max-width: $max_content_width + 200px;
 }
-</code></pre>
-</div>
-<div style="display:inline-block;width:49%;vertical-align:top;margin-left:12px;">
+```
+
 CSS
-<pre><code class="language-scss">
+```scss
 .my-element {
 	width: 500px;
 }
-</code><code class="language-scss">
+
 .another-element {
 	max-width: 1200px;
 }
-</code></pre>
-</div></div>
+```
 
 ### 7. Comments
 
