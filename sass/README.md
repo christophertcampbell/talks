@@ -2,6 +2,26 @@
 
 By Chris Campbell, &copy;2019; License: MIT
 
+## Table of Contents
+[What is Sass?](#what-is-sass-)  
+[So why SASS?](#so-why-sass-)  
+[Installing the SASS compiler](#installing-the-sass-compiler)  
+[Compiling SASS to CSS](#compiling-sass-to-css)  
+[Features of SASS](#features-of-sass)  
+1. [Partials](#1-partials)
+1. [Nesting](#2-nesting)
+1. [Variables](#3-variables)
+1. [Extensions](#4-extensions)
+1. [Mixins](#5-mixins)
+1. [Math Operators](#6-math-operators)
+1. [Maps](#7-maps)
+1. [Functions](#8-functions)
+1. [Expressions and Loops](#9-expressions-and-loops)
+1. [Comments](#10-comments)
+1. [Source Maps](#11-source-maps)
+
+[Resources](#resources)
+
 ## What is SASS?
 
 [SASS](https://sass-lang.com/guide) is an extension to CSS, providing several developer-friendly features for easier development.
@@ -471,7 +491,7 @@ CSS
 }
 ```
 
-### 9. Comments
+### 10. Comments
 
 Comments will be handled in different ways depending on whether you compile in compressed (minimized) mode or not.
 
@@ -483,7 +503,7 @@ Comments will be handled in different ways depending on whether you compile in c
 * Important comments (`/*! An important multi-line comment */`):
 	* Will always be included in the output, regardless of compressed or un-compressed
 
-### 10. Source Maps
+### 11. Source Maps
 
 The SASS CLI generates a source map for each bundle (`bundle.css.map`).  The source map allows the browser's developer tools to show exactly which partial contains a particular style rule.
 
