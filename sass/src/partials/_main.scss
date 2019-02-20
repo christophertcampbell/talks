@@ -168,3 +168,44 @@ $my_multiple_selectors: ".module-1,.module-2";
 .another-element {
 	max-width: $max_content_width + 200px;
 }
+
+/* Maps */
+
+$colors: (
+	background: #efefef,
+	text: #333,
+	link: rgb(20, 112, 233),
+	border: #222,
+	highlight: rgb(228, 188, 13)
+);
+
+.map-example-element {
+	color: map-get($colors, text);
+}
+
+/* Functions */
+
+@function color($color) {
+	@return map-get($colors, $color);
+}
+
+.function-example-element {
+	color: color(text);
+	background-color: color(background);
+	border: 1px solid color(border);
+	
+	a {
+		color: color(link);
+	}
+	
+	.highlight {
+		background-color: color(highlight);
+	}
+}
+
+/* Loops */
+@each $key, $value in $colors {
+	.loop-element-#{$key} {
+		background-color: $value;
+	}
+}

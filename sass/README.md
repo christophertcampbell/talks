@@ -355,7 +355,123 @@ CSS
 }
 ```
 
-### 7. Comments
+### 7. Maps
+
+* Maps provide a convenient way to bundle and interchange groups of values
+* A map consists of a comma-separated list of key:value pairs, wrapped in parenthesis and assigned to a variable name
+* Use <code>map-get($map-name, $key)</code> to retrieve values
+
+SASS
+```scss
+// Define the map
+$colors: (
+	background: #efefef,
+	text: #333,
+	link: rgb(20, 112, 233),
+	border: #222,
+	highlight: rgb(228, 188, 13)
+);
+
+// Use the map
+.map-example-element {
+	color: map-get($colors, text);
+}
+```
+
+CSS
+```scss
+.map-example-element {
+	color: #333;
+}
+```
+
+### 8. Functions
+
+* Functions can accept input, perform some process, and return output
+
+SASS
+```scss
+// Define the function
+@function color($color) {
+	@return map-get($colors, $color);
+}
+
+// Use the function
+.function-example-element {
+	color: color(text);
+	background-color: color(background);
+	border: 1px solid color(border);
+	
+	a {
+		color: color(link);
+	}
+	
+	.highlight {
+		background-color: color(highlight);
+	}
+}
+```
+
+CSS
+```scss
+.function-example-element {
+  color: #333;
+  background-color: #efefef;
+  border: 1px solid #222;
+}
+
+.function-example-element a {
+  color: #1470e9;
+}
+
+.function-example-element .highlight {
+  background-color: #e4bc0d;
+}
+```
+
+### 9. Expressions and Loops
+
+Available expressions include:
+* @if
+* @for
+* @each
+* @while
+
+#### @each
+
+SASS
+```scss
+@each $key, $value in $colors {
+	.loop-element-#{$key} {
+		background-color: $value;
+	}
+}
+```
+
+CSS
+```scss
+.loop-element-background {
+  background-color: #efefef;
+}
+
+.loop-element-text {
+  background-color: #333;
+}
+
+.loop-element-link {
+  background-color: #1470e9;
+}
+
+.loop-element-border {
+  background-color: #222;
+}
+
+.loop-element-highlight {
+  background-color: #e4bc0d;
+}
+```
+
+### 9. Comments
 
 Comments will be handled in different ways depending on whether you compile in compressed (minimized) mode or not.
 
@@ -367,7 +483,7 @@ Comments will be handled in different ways depending on whether you compile in c
 * Important comments (`/*! An important multi-line comment */`):
 	* Will always be included in the output, regardless of compressed or un-compressed
 
-### 8. Source Maps
+### 10. Source Maps
 
 The SASS CLI generates a source map for each bundle (`bundle.css.map`).  The source map allows the browser's developer tools to show exactly which partial contains a particular style rule.
 
@@ -375,5 +491,5 @@ Note: Source maps will not work if opening an html file from the file explorer. 
 
 ## Resources
 
-* [SASS Official Guide](https://sass-lang.com/guide)
-* [SASS Official Documentation](https://sass-lang.com/documentation/file.SASS_REFERENCE.html);
+* [SASS Quick Guide](https://sass-lang.com/guide)
+* [SASS Full Documentation](https://sass-lang.com/documentation/file.SASS_REFERENCE.html)
