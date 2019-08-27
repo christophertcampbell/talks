@@ -4,7 +4,7 @@ By Chris Campbell, ©2019; License: MIT
 
 Outline for presentation given August 27, 2019
 
-All images courtesy [NASA Imagery](https://images.nasa.gov/).  Non-commercial use [permitted](https://www.nasa.gov/multimedia/guidelines/index.html).
+All images courtesy [NASA Imagery](https://images.nasa.gov/).
 
 ## Overview
 
@@ -30,6 +30,7 @@ Web performance is a constant consideration when design web-based applications. 
 	* Use responsive images (srcset="") to serve smaller images at smaller screen sizes
 	* Serve next-gen images to modern browsers (.webp images served via `<picture>`)
 	* Lazy load images that are below-the-fold
+		* Use JS library, or native browser lazy loading via `loading="lazy"`
 1. **YouTube Videos**
 	* Embeded videos load with every page load, even if below-the-fold and never clicked
 	* Use a lazy load library, or use the YouTube Javascript API
