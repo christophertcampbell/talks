@@ -1,0 +1,21 @@
+{
+	"name": "web_performance_optimization_talk",
+	"version": "1.0.0",
+	"description": "Example material for presentation on web performance optimization",
+	"main": "index.js",
+	"directories": {
+		"example": "examples"
+	},
+	"scripts": {
+		"build": "sass examples/style.scss:examples/style.css --style compressed",
+		"build-fonts": "sass examples/fonts.scss:examples/fonts.css --style compressed",
+		"watch": "sass examples/style.scss:examples/style.css --watch",
+		"watch-fonts": "sass examples/fonts.scss:examples/fonts.css --watch",
+		"serve": "browser-sync examples/. -w --no-notify"
+	},
+	"author": "Chris Campbell",
+	"license": "MIT",
+	"devDependencies": {
+		"sass": "^1.16.1"
+	}
+}

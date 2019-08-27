@@ -1,0 +1,41 @@
+ Volume in drive C is OS
+ Volume Serial Number is A0ED-3E15
+
+ Directory of C:\Projects\talk-optimizing-page-load\images\1024
+
+[.]
+[..]
+0301627_orig.jpg
+0302063_orig.jpg
+16611703184_o_large.jpg
+17754652960_o_orig.jpg
+201107070028HQ_large.jpg
+9905485_orig.jpg
+files.txt
+GSFC_20171208_Archive_e000078_orig.jpg
+GSFC_20171208_Archive_e000078_orig_banner.jpg
+GSFC_20171208_Archive_e000615_orig.jpg
+GSFC_20171208_Archive_e000715_orig.png
+GSFC_20171208_Archive_e001327_orig.jpg
+GSFC_20171208_Archive_e001955_orig.jpg
+GSFC_20171208_Archive_e001963_orig.jpg
+iss040e083604_orig.jpg
+PIA01384_orig.jpg
+PIA01492_orig.jpg
+PIA03606_orig.jpg
+PIA03654_orig.jpg
+PIA04921_orig.jpg
+PIA08653_orig.jpg
+PIA09178_orig.jpg
+PIA09263_orig.jpg
+PIA12164_orig.jpg
+PIA12348_orig.jpg
+PIA16008_orig.jpg
+PIA16883_orig.jpg
+PIA17563_orig.jpg
+PIA18033_orig.jpg
+PIA21387_orig.jpg
+PIA21474_orig.jpg
+PIA21575_orig.jpg
+              32 File(s)      6,534,045 bytes
+               2 Dir(s)  144,040,570,880 bytes free

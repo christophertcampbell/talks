@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Web Performance Optimization</title>
+	<link rel="stylesheet" href="../lib/bootstrap/css/bootstrap.css">
+	<link rel="stylesheet" href="../style.css">
+	<link rel="stylesheet" href="../fonts.css">
+</head>
+<body>
+	<header class="container-fluid pt-2 pt-md-3 pt-lg-4 mb-4">
+		<div class="background-image">
+			<picture>
+				<source type="image/webp" srcset="../images/banner.webp">
+				<source type="image/jpg" srcset="../images/banner.jpg">
+				<img src="../images/banner.jpg">
+			</picture>
+		</div>
+		<div class="row">
+			<div class="col pl-3 pl-md-5">
+				<h1>Web Performance Optimization</h1>
+				<h2>Improving web page load times</h2>
+				<p class="mt-2 mt-sm-3 mt-md-4 mb-2">A talk by <a alt="Go to Chris Campbell on GitHub" target="_blank" href="https://github.com/christophertcampbell/">Chris Campbell</a></p>
+				<p><small class="d-none d-sm-block mt-0 mt-md-2 mt-lg-3">Imagery courtesty <a alt="Go to NASA imagery website" target="_blank" href="https://images.nasa.gov/">NASA</a></small></p>
+			</div>
+		</div>
+	</header>
+	<nav class="container">
+		<div class="row">
+			<div class="col">
+				<ul>
+					<li><a href="../images/../">Original</a></li>
+					<li><a href="../step1">1. Responsive</a></li>
+					<li><a href="../step2">2. Breakpoints</a></li>
+					<li><a href="../step3">3. Next-Gen</a></li>
+					<li><a href="../step4">4. Lazy Load</a></li>
+					<li><a href="../step5">5. Optimize Libraries</a></li>
+				</ul>
+			</div>
+		</div>
+	</nav>
+	<main class="container">
+		<section class="row">
+			<div class="col">
+				<h3 class="mt-3 mb-3">Step 2 - Add breakpoints to responsive images</h3>
+				<p>Implement <code>sizes="(min-width: 992px) 30vw, 100vw"</code> parameter with breakpoints</p>
+				<ul>
+					<li>Tells the browser if the image will take up less than full screen-width at certain screen sizes</li>
+				</ul>
+			</div>
+		</section>
+		<section class="row">
+				<div class="col-sm-12 col-lg-4 mt-4">
+					<img src="../images/1024/0301627_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/0301627_orig-320.jpg 320w, ../images/440/0301627_orig-440.jpg 440w, ../images/640/0301627_orig-640.jpg 640w, ../images/768/0301627_orig-768.jpg 768w, ../images/1024/0301627_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/17754652960_o_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/17754652960_o_orig-320.jpg 320w, ../images/440/17754652960_o_orig-440.jpg 440w, ../images/640/17754652960_o_orig-640.jpg 640w, ../images/768/17754652960_o_orig-768.jpg 768w, ../images/1024/17754652960_o_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/201107070028HQ_large-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/201107070028HQ_large-320.jpg 320w, ../images/440/201107070028HQ_large-440.jpg 440w, ../images/640/201107070028HQ_large-640.jpg 640w, ../images/768/201107070028HQ_large-768.jpg 768w, ../images/1024/201107070028HQ_large-1024.jpg 1024w"> 
+					<img src="../images/1024/9905485_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/9905485_orig-320.jpg 320w, ../images/440/9905485_orig-440.jpg 440w, ../images/640/9905485_orig-640.jpg 640w, ../images/768/9905485_orig-768.jpg 768w, ../images/1024/9905485_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/GSFC_20171208_Archive_e000078_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/GSFC_20171208_Archive_e000078_orig-320.jpg 320w, ../images/440/GSFC_20171208_Archive_e000078_orig-440.jpg 440w, ../images/640/GSFC_20171208_Archive_e000078_orig-640.jpg 640w, ../images/768/GSFC_20171208_Archive_e000078_orig-768.jpg 768w, ../images/1024/GSFC_20171208_Archive_e000078_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/GSFC_20171208_Archive_e000615_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/GSFC_20171208_Archive_e000615_orig-320.jpg 320w, ../images/440/GSFC_20171208_Archive_e000615_orig-440.jpg 440w, ../images/640/GSFC_20171208_Archive_e000615_orig-640.jpg 640w, ../images/768/GSFC_20171208_Archive_e000615_orig-768.jpg 768w, ../images/1024/GSFC_20171208_Archive_e000615_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/GSFC_20171208_Archive_e000715_orig-1024.png" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/GSFC_20171208_Archive_e000715_orig-320.png 320w, ../images/440/GSFC_20171208_Archive_e000715_orig-440.png 440w, ../images/640/GSFC_20171208_Archive_e000715_orig-640.png 640w, ../images/768/GSFC_20171208_Archive_e000715_orig-768.png 768w, ../images/1024/GSFC_20171208_Archive_e000715_orig-1024.png 1024w"> 
+					<img src="../images/1024/GSFC_20171208_Archive_e001327_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/GSFC_20171208_Archive_e001327_orig-320.jpg 320w, ../images/440/GSFC_20171208_Archive_e001327_orig-440.jpg 440w, ../images/640/GSFC_20171208_Archive_e001327_orig-640.jpg 640w, ../images/768/GSFC_20171208_Archive_e001327_orig-768.jpg 768w, ../images/1024/GSFC_20171208_Archive_e001327_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/GSFC_20171208_Archive_e001955_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/GSFC_20171208_Archive_e001955_orig-320.jpg 320w, ../images/440/GSFC_20171208_Archive_e001955_orig-440.jpg 440w, ../images/640/GSFC_20171208_Archive_e001955_orig-640.jpg 640w, ../images/768/GSFC_20171208_Archive_e001955_orig-768.jpg 768w, ../images/1024/GSFC_20171208_Archive_e001955_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/GSFC_20171208_Archive_e001963_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/GSFC_20171208_Archive_e001963_orig-320.jpg 320w, ../images/440/GSFC_20171208_Archive_e001963_orig-440.jpg 440w, ../images/640/GSFC_20171208_Archive_e001963_orig-640.jpg 640w, ../images/768/GSFC_20171208_Archive_e001963_orig-768.jpg 768w, ../images/1024/GSFC_20171208_Archive_e001963_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/iss040e083604_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/iss040e083604_orig-320.jpg 320w, ../images/440/iss040e083604_orig-440.jpg 440w, ../images/640/iss040e083604_orig-640.jpg 640w, ../images/768/iss040e083604_orig-768.jpg 768w, ../images/1024/iss040e083604_orig-1024.jpg 1024w"> 
+				</div>
+				<div class="col-sm-12 col-lg-4 mt-4">
+					<img src="../images/1024/0302063_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/0302063_orig-320.jpg 320w, ../images/440/0302063_orig-440.jpg 440w, ../images/640/0302063_orig-640.jpg 640w, ../images/768/0302063_orig-768.jpg 768w, ../images/1024/0302063_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA01384_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA01384_orig-320.jpg 320w, ../images/440/PIA01384_orig-440.jpg 440w, ../images/640/PIA01384_orig-640.jpg 640w, ../images/768/PIA01384_orig-768.jpg 768w, ../images/1024/PIA01384_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA01492_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA01492_orig-320.jpg 320w, ../images/440/PIA01492_orig-440.jpg 440w, ../images/640/PIA01492_orig-640.jpg 640w, ../images/768/PIA01492_orig-768.jpg 768w, ../images/1024/PIA01492_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA03606_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA03606_orig-320.jpg 320w, ../images/440/PIA03606_orig-440.jpg 440w, ../images/640/PIA03606_orig-640.jpg 640w, ../images/768/PIA03606_orig-768.jpg 768w, ../images/1024/PIA03606_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA03654_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA03654_orig-320.jpg 320w, ../images/440/PIA03654_orig-440.jpg 440w, ../images/640/PIA03654_orig-640.jpg 640w, ../images/768/PIA03654_orig-768.jpg 768w, ../images/1024/PIA03654_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA04921_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA04921_orig-320.jpg 320w, ../images/440/PIA04921_orig-440.jpg 440w, ../images/640/PIA04921_orig-640.jpg 640w, ../images/768/PIA04921_orig-768.jpg 768w, ../images/1024/PIA04921_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA08653_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA08653_orig-320.jpg 320w, ../images/440/PIA08653_orig-440.jpg 440w, ../images/640/PIA08653_orig-640.jpg 640w, ../images/768/PIA08653_orig-768.jpg 768w, ../images/1024/PIA08653_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA09178_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA09178_orig-320.jpg 320w, ../images/440/PIA09178_orig-440.jpg 440w, ../images/640/PIA09178_orig-640.jpg 640w, ../images/768/PIA09178_orig-768.jpg 768w, ../images/1024/PIA09178_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA21387_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA21387_orig-320.jpg 320w, ../images/440/PIA21387_orig-440.jpg 440w, ../images/640/PIA21387_orig-640.jpg 640w, ../images/768/PIA21387_orig-768.jpg 768w, ../images/1024/PIA21387_orig-1024.jpg 1024w"> 
+				</div>
+				<div class="col-sm-12 col-lg-4 mt-4">
+					<img src="../images/1024/16611703184_o_large-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/16611703184_o_large-320.jpg 320w, ../images/440/16611703184_o_large-440.jpg 440w, ../images/640/16611703184_o_large-640.jpg 640w, ../images/768/16611703184_o_large-768.jpg 768w, ../images/1024/16611703184_o_large-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA12164_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA12164_orig-320.jpg 320w, ../images/440/PIA12164_orig-440.jpg 440w, ../images/640/PIA12164_orig-640.jpg 640w, ../images/768/PIA12164_orig-768.jpg 768w, ../images/1024/PIA12164_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA12348_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA12348_orig-320.jpg 320w, ../images/440/PIA12348_orig-440.jpg 440w, ../images/640/PIA12348_orig-640.jpg 640w, ../images/768/PIA12348_orig-768.jpg 768w, ../images/1024/PIA12348_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA16008_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA16008_orig-320.jpg 320w, ../images/440/PIA16008_orig-440.jpg 440w, ../images/640/PIA16008_orig-640.jpg 640w, ../images/768/PIA16008_orig-768.jpg 768w, ../images/1024/PIA16008_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA16883_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA16883_orig-320.jpg 320w, ../images/440/PIA16883_orig-440.jpg 440w, ../images/640/PIA16883_orig-640.jpg 640w, ../images/768/PIA16883_orig-768.jpg 768w, ../images/1024/PIA16883_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA17563_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA17563_orig-320.jpg 320w, ../images/440/PIA17563_orig-440.jpg 440w, ../images/640/PIA17563_orig-640.jpg 640w, ../images/768/PIA17563_orig-768.jpg 768w, ../images/1024/PIA17563_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA18033_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA18033_orig-320.jpg 320w, ../images/440/PIA18033_orig-440.jpg 440w, ../images/640/PIA18033_orig-640.jpg 640w, ../images/768/PIA18033_orig-768.jpg 768w, ../images/1024/PIA18033_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA21474_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA21474_orig-320.jpg 320w, ../images/440/PIA21474_orig-440.jpg 440w, ../images/640/PIA21474_orig-640.jpg 640w, ../images/768/PIA21474_orig-768.jpg 768w, ../images/1024/PIA21474_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA21575_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA21575_orig-320.jpg 320w, ../images/440/PIA21575_orig-440.jpg 440w, ../images/640/PIA21575_orig-640.jpg 640w, ../images/768/PIA21575_orig-768.jpg 768w, ../images/1024/PIA21575_orig-1024.jpg 1024w"> 
+					<img src="../images/1024/PIA09263_orig-1024.jpg" sizes="(min-width: 992px) 30vw, 100vw" srcset="../images/320/PIA09263_orig-320.jpg 320w, ../images/440/PIA09263_orig-440.jpg 440w, ../images/640/PIA09263_orig-640.jpg 640w, ../images/768/PIA09263_orig-768.jpg 768w, ../images/1024/PIA09263_orig-1024.jpg 1024w"> 
+				</div>
+			</section>
+	</main>
+</body>
+</html>
