@@ -65,6 +65,7 @@ Web performance is a constant consideration when design web-based applications. 
 
 ## Resources
 
+* [ImageMagick](https://imagemagick.org/) - Convert images between formats, resize, etc - UI and CLI
 * [cwebp CLI Utility](https://developers.google.com/speed/webp/docs/cwebp) - Google - Converts .jpg, .png etc to .webp
 * [Squoosh](https://squoosh.app/) - Online tool for compressing, converting and/or resizing images for web
 * [LazyLoad](https://github.com/verlok/lazyload) - Andrea Verlicchi - Simple but effective JS library for lazy loading images
