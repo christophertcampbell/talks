@@ -1,6 +1,6 @@
 # Quick Guide to SASS
 
-By Chris Campbell, &copy;2019; License: MIT
+Presented by [Chris Campbell](https://github.com/christophertcampbell) - February 5, 2019 at [NCJS](https://github.com/NCJS/) meetup
 
 ## Table of Contents
 [What is Sass?](#what-is-sass-)  
@@ -513,3 +513,7 @@ Note: Source maps will not work if opening an html file from the file explorer. 
 
 * [SASS Quick Guide](https://sass-lang.com/guide)
 * [SASS Full Documentation](https://sass-lang.com/documentation/file.SASS_REFERENCE.html)
+
+## License
+
+MIT

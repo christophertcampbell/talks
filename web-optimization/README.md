@@ -1,8 +1,6 @@
 # Web Performance Optimization
 
-By Chris Campbell, ©2019; License: MIT
-
-Outline for presentation given August 27, 2019
+Presented by [Chris Campbell](https://github.com/christophertcampbell) - August 27, 2019 at [NCJS](https://github.com/NCJS/) meetup
 
 All images courtesy [NASA Imagery](https://images.nasa.gov/).
 
@@ -70,3 +68,7 @@ Web performance is a constant consideration when design web-based applications. 
 * [Squoosh](https://squoosh.app/) - Online tool for compressing, converting and/or resizing images for web
 * [LazyLoad](https://github.com/verlok/lazyload) - Andrea Verlicchi - Simple but effective JS library for lazy loading images
 * [LightHouse](https://developers.google.com/web/tools/lighthouse/) - Google - Utility for auditing performance, accessibility and best practices. Install as browser extension or use via Audits tab in browser Developer Tools.
+
+## License
+
+MIT
